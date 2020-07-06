@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Página de Jogadores</title>
+</head>
+
+<body onload="loadJogador();">
+    <script src="jsTime.js"></script>
+    <div class="form">
+        <form id="formulario" action="" onsubmit="return false">
+            <div class="inputs">
+                <h1 id="h1Jogador">Lista de jogadores do time</h1>
+                <label for="nome">Nome do Jogador:</label>
+                <input id="nome" placeholder="Nome do jogador" type="text" name="nome" required><br>
+                <label for="idade">Idade:</label>
+                <input type="number" placeholder="20" id="idade" name="idade" required><br>
+                <label for="salario">Salário:</label>
+                <input type="number" id="salario" placeholder="5000" name="salario" min="0" required><br>
+                <label for="contrato">Contrato:</label>
+                <input type="text" id="contrato" placeholder="15/05/2030" required name="contrato"><br>
+                <label for="imagem">Imagem:</label>
+                <input type="url" id="imagem" placeholder="http://url.do.avatar" required name="imagem"><br><br></div>
+            <div class="botoes">
+                <button type="submit" form="formulario" value="Salvar" id="salvar" onclick="enviarJogador()">Criar</button>
+                <button type="submit" form="formulario" value="Editar" id="editar" onclick="alterarJogador()">Editar</button>
+                <button type="reset" onclick="return confirm_reset();" value="Cancelar" id="cancelar">Cancelar</button>
+                <button type="submit" onclick="return confirma_sair();" value="Sair" id="sair">Sair</button>
+            </div>
+        </form>
+    </div>
+    <table id="tabelaJogador">
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Salário</th>
+            <th>Contrato</th>
+            <th>Imagem</th>
+            <th>Ações</th>
+        </tr>
+    </table>
+</body>
+
+</html>

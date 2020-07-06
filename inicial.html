@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Página inicial - Times de Futebol</title>
+</head>
+
+<body onload="testar();">
+    <script src="jsTime.js"></script>
+    <div class="form">
+        <form id="formulario" action="" onsubmit="return false">
+            <div class="inputs">
+                <h1 id="h1">Lista de Times</h1>
+                <label for="nome">Nome do time:</label>
+                <input id="name" placeholder="Nome do seu time" type="text" name="name" required><br>
+                <label for="local">Campeonato:</label>
+                <input type="text" placeholder="ex. Brasileirão" id="local" name="local" required><br>
+                <label for="idade">Ano de Fundação:</label>
+                <input type="number" id="ano" placeholder="2010" name="ano" min="0" required><br>
+                <label for="perfil">Escudo:</label>
+                <input type="url" id="avatar" placeholder="http://url.do.avatar" required name="avatar"><br><br></div>
+            <div class="botoes">
+                <button type="submit" form="formulario" value="Salvar" id="salvar" onclick="enviar()">Criar</button>
+                <button type="reset" onclick="return confirm_reset();" value="Cancelar" id="cancelar">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <table id="tabela">
+        <tr>
+            <th>Id</th>
+            <th>Nome do Time</th>
+            <th>Campeonato</th>
+            <th>Ano de Fundação</th>
+            <th>Escudo</th>
+            <th>Ações</th>
+        </tr>
+    </table>
+</body>
+
+</html>
